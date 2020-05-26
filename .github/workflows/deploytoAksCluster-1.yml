@@ -42,7 +42,7 @@ jobs:
       with:
         renderEngine: 'helm'
         helmChart: chart/hello/
-        releaseName: akstest2acr.azurecr.io/vipulakscluster
+        releaseName: thirdrelease
         helm-version: 'latest' 
         silent: 'false'
         overrideFiles: |
