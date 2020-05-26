@@ -42,14 +42,14 @@ jobs:
       with:
         renderEngine: 'helm'
         helmChart: chart/hello/
-        releaseName: secondrelease
+        releaseName: akstest2acr.azurecr.io/vipulakscluster
         helm-version: 'latest' 
         silent: 'false'
         overrideFiles: |
           
         overrides: |
           replicas:2
-          image.repository:vipulakscluster
+          image.repository: akstest2acr.azurecr.io/vipulakscluster
           image.tag:${{ github.sha }}
           image.pullSecret:vipulaksclusdockerauth
       id: bake
